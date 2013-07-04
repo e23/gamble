@@ -7,16 +7,17 @@
 	margin: 0;
 }
 
-header {
-	height: 25px;
-	background-color: #DDD;
+body {
+	background-color: #0092c7;
 }
 
 #container {
+	background-color: #f2f2f2;
 	margin: 0 auto;
 	max-width: 600px;
-	margin-top: 200px;
-	border: solid 1px #222;
+	margin-top: 100px;
+	border: solid 1px #0092c7;
+	border-radius: 10px;
 }
 
 .coin {
@@ -85,11 +86,12 @@ h2 {
 	text-align: center;
 	padding: 10px 0px;
 }
+#top_pages {
 
-#user_nav {
+}
+#top_bar{
 	margin: 0 auto;
-	float: right;
-
+	text-align: center;
 }
 #tokens_display {
 	margin: 0 auto;
@@ -110,4 +112,12 @@ h2 {
 
 .alert-error {
 	color: red;
+}
+
+.leaderboard {
+	margin: 0 auto;
+	margin-top: 25px;
+	text-align: center;
+    list-style: none;
+
 }

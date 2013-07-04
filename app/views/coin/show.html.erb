@@ -1,0 +1,8 @@
+<div class="leaderboard">
+  <% @users.each do |user| %>
+    <li>
+      <%= user.username %>
+      <%= user.tokens %>
+    </li>
+  <% end %>
+</div><%= will_paginate @users %>

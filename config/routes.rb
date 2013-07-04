@@ -7,6 +7,7 @@ Gamble::Application.routes.draw do
 
   match 'coinflip' => 'coin#index', via: :get
   match 'coinflip' => 'coin#flip', via: :post
+  match 'leaderboards' => 'coin#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

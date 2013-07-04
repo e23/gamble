@@ -24,6 +24,9 @@ class CoinController < ApplicationController
 	  	render 'index'
   	end
 
+  	def show
+  		@users = User.paginate(per_page: 25, order: 'tokens DESC', page: params[:page])
+  	end
 
   	private
   		def check
