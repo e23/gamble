@@ -1,13 +1,36 @@
-<%= form_tag({controller: "coin", action: "flip"}, method: "post") do |f| %>
+	<%= image_tag "/images/#{@coin}.png", class: "coin" %>
 
-	<%= radio_button_tag :setting, "heads" %>
-	<%= label_tag :heads, "heads" %>
-	<%= radio_button_tag :setting, "tails" %>
-	<%= label_tag :tails, "tails" %>
-	<br/>
-	<%= label_tag :bet, "Enter Bet Amount" %>
-	<%= text_field_tag :bet %>
-	<br/>
-	<div id="sub_butt"><%= submit_tag "Flip" %></div>
-<% end %>
+	<div id="tokens_display">	
+		<%= current_user.tokens %> Tokens
+	</div>
+	<%= form_tag({controller: "coin", action: "flip"}, method: "post") do |f| %>
+		<div class="radio-outer">
+			<div class="head-left">
+				<div class="headradio">
+					<%= radio_button_tag :setting, "heads" %>
+					<br/>
+					<%= label_tag :heads, "heads" %>
+				</div>
+
+			</div>
+			<div class="tails-right">
+				<div class="tailsradio">
+					<%= radio_button_tag :setting, "tails" %>
+					<br/>
+					<%= label_tag :tails, "tails" %>
+				</div>
+
+			</div>
+		</div>
+		<br/>
+		<div id="textbox">	
+			<% flash.each do |key, value| %>
+     		 	<div class="alert-<%= key %>"><%= value %></div>
+  			<% end %>
+			<h2>Enter bet amount</h2>
+			<%= text_field_tag :bet %>
+		</div>
+		<br/>
+		<div id="sub_butt"><%= submit_tag "flip" %></div>
+	<% end %>
 
