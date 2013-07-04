@@ -1,0 +1,13 @@
+<%= form_tag({controller: "coin", action: "flip"}, method: "post") do |f| %>
+
+	<%= radio_button_tag :setting, "heads" %>
+	<%= label_tag :heads, "heads" %>
+	<%= radio_button_tag :setting, "tails" %>
+	<%= label_tag :tails, "tails" %>
+	<br/>
+	<%= label_tag :bet, "Enter Bet Amount" %>
+	<%= text_field_tag :bet %>
+	<br/>
+	<div id="sub_butt"><%= submit_tag "Flip" %></div>
+<% end %>
+

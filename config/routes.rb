@@ -5,6 +5,8 @@ Gamble::Application.routes.draw do
   match 'help' => 'StaticPages#help'
   match 'about' => 'StaticPages#about'
 
+  match 'coinflip' => 'coin#index', via: :get
+  match 'coinflip' => 'coin#flip', via: :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
