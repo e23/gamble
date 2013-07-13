@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  site_seed: MyString
+  user_seed: MyString
+  rolls: 
+
+two:
+  site_seed: MyString
+  user_seed: MyString
+  rolls: 

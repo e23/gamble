@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703235635) do
+ActiveRecord::Schema.define(:version => 20130708091034) do
+
+  create_table "seeds", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "site_seed"
+    t.string   "user_seed"
+    t.integer  "rolls"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "seeds", ["user_id"], :name => "index_seeds_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",   :null => false

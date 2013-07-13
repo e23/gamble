@@ -2,6 +2,7 @@ class CoinController < ApplicationController
 	before_filter :authenticate_user!
 	before_filter :check, only: [:flip]
 
+
 	def index
 		@coin = "home"
 	end
